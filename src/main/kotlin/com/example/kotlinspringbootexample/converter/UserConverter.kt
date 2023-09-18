@@ -17,9 +17,12 @@ fun User.toDTO(): UserDTO {
 
 fun CreateUserRequest.toUser(): User {
     return User(
-        username = this.username,
-        email = this.email,
-        name = this.name,
-        surname = this.surname
+        null,
+        this.username,
+        this.email,
+        this.name,
+        this.surname,
+        null
+
     )
 }

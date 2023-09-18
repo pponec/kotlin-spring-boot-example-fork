@@ -20,23 +20,24 @@ fun Address.toDTO(): AddressDTO {
 
 fun CreateAddressRequest.toAddress(user: User): Address {
     return Address(
-        user = user,
-        title = this.title,
-        country = this.country,
-        city = this.city,
-        town = this.town,
-        detail = this.detail
-    )
+        null,
+        user,
+        this.title,
+        this.country,
+        this.city,
+        this.town,
+        this.detail
+    );
 }
 
 fun UpdateAddressRequest.toAddress(existing: Address): Address {
     return Address(
-        id = existing.id,
-        user = existing.user,
-        title = this.title,
-        country = this.country,
-        city = this.city,
-        town = this.town,
-        detail = this.detail
+        existing.id,
+        existing.user,
+        this.title,
+        this.country,
+        this.city,
+        this.town,
+        this.detail
     )
 }
