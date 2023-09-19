@@ -1,14 +1,14 @@
 package com.example.kotlinspringbootexample.converter
 
-import com.example.kotlinspringbootexample.dto.AddressDTO
-import com.example.kotlinspringbootexample.model.Address
-import com.example.kotlinspringbootexample.model.User
+import com.example.kotlinspringbootexample.dto.AddressDto
+import com.example.kotlinspringbootexample.entity.Address
+import com.example.kotlinspringbootexample.entity.User
 import com.example.kotlinspringbootexample.request.CreateAddressRequest
 import com.example.kotlinspringbootexample.request.CreateUserRequest
 import com.example.kotlinspringbootexample.request.UpdateAddressRequest
 
-fun Address.toDTO(): AddressDTO {
-    return AddressDTO(
+fun Address.toDto(): AddressDto {
+    return AddressDto(
         id = this.id,
         title = this.title,
         country = this.country,
