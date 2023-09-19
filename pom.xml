@@ -14,8 +14,8 @@
     <name>kotlin-spring-boot-example</name>
     <description>kotlin-spring-boot-example</description>
     <properties>
-        <java.version>11</java.version>
-        <kotlin.version>1.6.21</kotlin.version>
+        <java.version>17</java.version>
+        <kotlin.version>1.9.0</kotlin.version>
     </properties>
     <dependencies>
         <dependency>
