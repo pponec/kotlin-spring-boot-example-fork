@@ -14,12 +14,12 @@ fun User.toDTO(): UserDTO {
     )
 }
 
-
 fun CreateUserRequest.toUser(): User {
+    val my = this
     return User(
-        username = this.username,
-        email = this.email,
-        name = this.name,
-        surname = this.surname
+        username = my.username,
+        email = my.email,
+        name = my.name,
+        surname = my.surname,
     )
 }

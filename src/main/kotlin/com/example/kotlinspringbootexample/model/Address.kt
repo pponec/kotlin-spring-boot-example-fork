@@ -5,16 +5,23 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "address")
-data class Address(
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null,
+data class Address (
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Long? = null,
+
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    val user: User,
-    val title: String,
-    val country: String,
-    val city: String,
-    val town: String? = null,
-    val detail: String
+    var user: User = User(),
+
+    var title: String = "",
+
+    var country: String = "",
+
+    var city: String = "",
+
+    var town: String? = null,
+
+    var detail: String = "",
 )
