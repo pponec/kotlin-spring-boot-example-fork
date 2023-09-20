@@ -11,6 +11,8 @@ interface UserMapper {
 
     fun toDto(user: User): UserDto
 
+    fun toDto(users: List<User>): List<UserDto>
+
     fun toBean(userDto: UserDto): User
 
     fun toBean(createUserRequest: CreateUserRequest): User

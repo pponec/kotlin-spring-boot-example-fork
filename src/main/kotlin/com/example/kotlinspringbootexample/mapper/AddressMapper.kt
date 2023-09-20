@@ -11,7 +11,9 @@ import org.mapstruct.MappingConstants
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 interface AddressMapper {
 
-    fun toDto(user: Address): AddressDto
+    fun toDto(address: Address): AddressDto
+
+    fun toDto(addresses: List<Address>): List<AddressDto>
 
     fun toBean(address: AddressDto): Address
 
