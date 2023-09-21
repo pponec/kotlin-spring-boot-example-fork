@@ -8,7 +8,7 @@ annotation class NoArg
 @Entity
 @NoArg
 @Table(name = "`user`")
-data class User (
+class User (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,
