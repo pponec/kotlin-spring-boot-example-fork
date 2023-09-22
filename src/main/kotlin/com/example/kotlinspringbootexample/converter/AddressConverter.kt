@@ -14,31 +14,29 @@ fun Address.toDto(): AddressDto {
         country = this.country,
         city = this.city,
         town = this.town,
-        detail = this.detail,
+        detail = this.detail
     )
 }
 
 fun CreateAddressRequest.toAddress(user: User): Address {
-    val my = this
-    return Address().apply {
-        this.user = user
-        this.title = my.title
-        this.country = my.country
-        this.city = my.city
-        this.town = my.town
-        this.detail = my.detail
-    }
+    return Address(
+        user = user,
+        title = this.title,
+        country = this.country,
+        city = this.city,
+        town = this.town,
+        detail = this.detail
+    )
 }
 
 fun UpdateAddressRequest.toAddress(existing: Address): Address {
-    val my = this
-    return Address().apply {
-        this.id = existing.id
-        this.user = existing.user
-        this.title = my.title
-        this.country = my.country
-        this.city = my.city
-        this.town = my.town
-        this.detail = my.detail
-    }
+    return Address(
+        id = existing.id,
+        user = existing.user,
+        title = this.title,
+        country = this.country,
+        city = this.city,
+        town = this.town,
+        detail = this.detail
+    )
 }
