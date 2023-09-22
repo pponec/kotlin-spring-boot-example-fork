@@ -1,6 +1,6 @@
 package com.example.kotlinspringbootexample.request
 
-import javax.validation.constraints.NotNull
+import jakarta.validation.constraints.NotNull
 
 data class CreateAddressRequest(
     @NotNull
