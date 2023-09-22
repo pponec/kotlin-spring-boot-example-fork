@@ -1,7 +1,7 @@
 package com.example.kotlinspringbootexample.service
 
 import com.example.kotlinspringbootexample.exception.UserNotFoundException
-import com.example.kotlinspringbootexample.model.User
+import com.example.kotlinspringbootexample.entity.User
 import com.example.kotlinspringbootexample.repository.UserRepository
 import com.example.kotlinspringbootexample.request.CreateUserRequest
 import io.mockk.every

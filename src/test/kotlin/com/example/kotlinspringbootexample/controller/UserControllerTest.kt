@@ -1,9 +1,6 @@
 package com.example.kotlinspringbootexample.controller
 
-import com.example.kotlinspringbootexample.converter.toDTO
-import com.example.kotlinspringbootexample.model.User
 import com.fasterxml.jackson.databind.ObjectMapper
-import org.hamcrest.Matchers.hasSize
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase
@@ -15,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.get
 import org.springframework.test.web.servlet.post
 import org.springframework.web.servlet.function.RequestPredicates
+import com.example.kotlinspringbootexample.entity.User
 
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)

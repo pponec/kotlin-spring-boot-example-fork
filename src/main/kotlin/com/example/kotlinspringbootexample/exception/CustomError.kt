@@ -1,4 +1,4 @@
-package com.example.kotlinspringbootexample.model
+package com.example.kotlinspringbootexample.exception
 
 import org.springframework.http.HttpStatus
 
