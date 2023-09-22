@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/user")
 class UserController(private val userService: UserService) {
 
-    @GetMapping
+    @GetMapping("all")
     fun getUsers(): ResponseEntity<List<UserDto>> =
         ResponseEntity.ok(userService.getAllUsers().map { it.toDto() })
 

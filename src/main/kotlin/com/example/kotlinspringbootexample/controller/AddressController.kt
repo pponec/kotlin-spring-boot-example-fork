@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/address")
 class AddressController( private val addressService: AddressService) {
 
-    @GetMapping
+    @GetMapping("all")
     fun getAllAddresses(): ResponseEntity<List<AddressDto>> =
         ResponseEntity.ok(addressService.getAllAddresses().map { it.toDto() })
 
