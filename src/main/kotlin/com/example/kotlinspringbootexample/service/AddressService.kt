@@ -2,7 +2,7 @@ package com.example.kotlinspringbootexample.service
 
 import com.example.kotlinspringbootexample.converter.toAddress
 import com.example.kotlinspringbootexample.exception.AddressNotFoundException
-import com.example.kotlinspringbootexample.model.Address
+import com.example.kotlinspringbootexample.entity.Address
 import com.example.kotlinspringbootexample.repository.AddressRepository
 import com.example.kotlinspringbootexample.request.CreateAddressRequest
 import com.example.kotlinspringbootexample.request.UpdateAddressRequest

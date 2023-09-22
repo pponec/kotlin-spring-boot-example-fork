@@ -1,7 +1,7 @@
-package com.example.kotlinspringbootexample.model
+package com.example.kotlinspringbootexample.entity
 
 import com.fasterxml.jackson.annotation.JsonIgnore
-import javax.persistence.*
+import jakarta.persistence.*
 
 @Entity
 @Table(name = "`user`")
