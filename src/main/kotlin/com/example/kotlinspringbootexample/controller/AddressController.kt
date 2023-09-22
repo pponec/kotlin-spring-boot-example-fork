@@ -1,7 +1,7 @@
 package com.example.kotlinspringbootexample.controller
 
-import com.example.kotlinspringbootexample.converter.toDTO
-import com.example.kotlinspringbootexample.dto.AddressDTO
+import com.example.kotlinspringbootexample.converter.toDto
+import com.example.kotlinspringbootexample.dto.AddressDto
 import com.example.kotlinspringbootexample.request.CreateAddressRequest
 import com.example.kotlinspringbootexample.request.UpdateAddressRequest
 import com.example.kotlinspringbootexample.service.AddressService
@@ -14,24 +14,24 @@ import org.springframework.web.bind.annotation.*
 class AddressController( private val addressService: AddressService) {
 
     @GetMapping
-    fun getAllAddresses(): ResponseEntity<List<AddressDTO>> =
-        ResponseEntity.ok(addressService.getAllAddresses().map { it.toDTO() })
+    fun getAllAddresses(): ResponseEntity<List<AddressDto>> =
+        ResponseEntity.ok(addressService.getAllAddresses().map { it.toDto() })
 
     @GetMapping("/{id}")
-    fun getAllAddresses(@PathVariable id: Long): ResponseEntity<AddressDTO> =
-        ResponseEntity.ok(addressService.getById(id).toDTO())
+    fun getAllAddresses(@PathVariable id: Long): ResponseEntity<AddressDto> =
+        ResponseEntity.ok(addressService.getById(id).toDto())
 
     @GetMapping("/by-user/{id}")
-    fun getByUser(@PathVariable id: Long): ResponseEntity<List<AddressDTO>> =
-        ResponseEntity.ok(addressService.getAddressesByUser(id).map { it.toDTO() })
+    fun getByUser(@PathVariable id: Long): ResponseEntity<List<AddressDto>> =
+        ResponseEntity.ok(addressService.getAddressesByUser(id).map { it.toDto() })
 
     @PostMapping
-    fun createAddress(@RequestBody createAddressRequest: CreateAddressRequest): ResponseEntity<AddressDTO> =
-        ResponseEntity.status(HttpStatus.CREATED).body(addressService.createAddress(createAddressRequest).toDTO())
+    fun createAddress(@RequestBody createAddressRequest: CreateAddressRequest): ResponseEntity<AddressDto> =
+        ResponseEntity.status(HttpStatus.CREATED).body(addressService.createAddress(createAddressRequest).toDto())
 
     @PutMapping
-    fun updateAddress(@RequestBody updateAddressRequest: UpdateAddressRequest): ResponseEntity<AddressDTO> =
-        ResponseEntity.ok(addressService.updateAddress(updateAddressRequest).toDTO())
+    fun updateAddress(@RequestBody updateAddressRequest: UpdateAddressRequest): ResponseEntity<AddressDto> =
+        ResponseEntity.ok(addressService.updateAddress(updateAddressRequest).toDto())
 
     @DeleteMapping("/{id}")
     fun updateAddress(@PathVariable id: Long): ResponseEntity<Void> {

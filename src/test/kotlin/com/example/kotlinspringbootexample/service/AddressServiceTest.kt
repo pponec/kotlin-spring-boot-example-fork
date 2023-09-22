@@ -1,10 +1,9 @@
 package com.example.kotlinspringbootexample.service
 
 import com.example.kotlinspringbootexample.converter.toAddress
+import com.example.kotlinspringbootexample.entity.Address
+import com.example.kotlinspringbootexample.entity.User
 import com.example.kotlinspringbootexample.exception.AddressNotFoundException
-import com.example.kotlinspringbootexample.exception.UserNotFoundException
-import com.example.kotlinspringbootexample.model.Address
-import com.example.kotlinspringbootexample.model.User
 import com.example.kotlinspringbootexample.repository.AddressRepository
 import com.example.kotlinspringbootexample.request.CreateAddressRequest
 import com.example.kotlinspringbootexample.request.UpdateAddressRequest
@@ -15,7 +14,6 @@ import io.mockk.verify
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.mockito.ArgumentMatchers.anyLong
 import java.util.*

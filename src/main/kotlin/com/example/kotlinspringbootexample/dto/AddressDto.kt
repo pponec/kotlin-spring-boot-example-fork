@@ -1,6 +1,6 @@
 package com.example.kotlinspringbootexample.dto
 
-data class AddressDTO(
+data class AddressDto(
     val id: Long? = null,
     val title: String,
     val country: String,
