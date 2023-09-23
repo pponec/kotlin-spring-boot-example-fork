@@ -1,11 +1,11 @@
-package com.example.kotlinspringbootexample
+package com.example.blog
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class KotlinSpringBootExampleApplication
+class DemoApplication
 
 fun main(args: Array<String>) {
-    runApplication<KotlinSpringBootExampleApplication>(*args)
+	runApplication<DemoApplication>(*args)
 }
