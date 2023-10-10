@@ -26,3 +26,7 @@ class User(
     @Id @GeneratedValue
     var id: Long? = null
 )
+
+//fun createArticle() : Article {
+//    return Article()
+//}

@@ -7,20 +7,14 @@ import org.springframework.boot.test.context.SpringBootTest
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class BlogApplicationKtTest {
 
-    @Test
-    fun `Assert blog page title, content and status code`() {
 
-        val test = User();
-
-
-
-
-
-        val x = test.id;
-
-
-
-        // TODO
-    }
+//    @Test
+//    fun `Assert blog page title, content and status code`() {
+//
+//        val test = User();
+//        val x = test.id;
+//
+//        // TODO
+//    }
 
 }
