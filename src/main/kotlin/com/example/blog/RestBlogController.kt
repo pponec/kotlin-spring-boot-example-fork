@@ -2,13 +2,14 @@ package com.example.blog
 
 import org.springframework.ui.Model
 import org.springframework.ui.set
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.*
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/")
-class HtmlController {
+class RestBlogController(
+    var commonService: CommonService,
+) {
 
     @GetMapping("/echo")
     fun echo(): String {
